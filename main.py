@@ -99,7 +99,7 @@ def register():
         new_user = User(
             email=form.email.data,
             name=form.name.data,
-            password=hash_and_salted_password,
+            password=form.password.data,
         )
         db.session.add(new_user)
         db.session.commit()
